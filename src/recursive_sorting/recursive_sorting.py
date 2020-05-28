@@ -1,3 +1,5 @@
+
+
 # Quick Sort Algorithm
 # 1. Select a pivot. Often times this is the first or last element in a set. It can also be the middle.
 # 2. Move all elements smaller than the pivot to the left.
@@ -29,7 +31,7 @@ def quicksort_students(arr):
         low = [n for n in arr if n < pivot]
         middle = [n for n in arr if n == pivot]
         high = [n for n in arr if n > pivot]
-        return [*quicksort(low), *middle, *quicksort(high)]
+        return [*quicksort_students(low), *middle, *quicksort_students(high)]
     else:
         return []
 
